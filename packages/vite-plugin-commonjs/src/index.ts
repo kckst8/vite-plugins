@@ -16,7 +16,6 @@ export function viteCommonjs(
   const filter = createFilter(options.include, options.exclude);
   return {
     name: "originjs:commonjs",
-    apply: "serve",
     transform(code: string, id: string): TransformResult {
       if (
         !filter(id) ||
